@@ -19,6 +19,15 @@
 		<servlet-name>helloservlet</servlet-name>
 		<url-pattern>/hello</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>downloadservlet</servlet-name>
+		<servlet-class>com.lijie.DownloadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>downloadservlet</servlet-name>
+		<url-pattern>/download</url-pattern>
+	</servlet-mapping>
 
 	<filter>
 		<filter-name>SetCharacterEncodingFilter</filter-name>
