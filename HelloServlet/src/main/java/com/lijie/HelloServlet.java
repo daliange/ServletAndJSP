@@ -11,19 +11,28 @@ public class HelloServlet extends HttpServlet{
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response){
 		System.out.println("doGet--------");
-		String name = request.getParameter("name");
-		System.out.println("name="+name);
+		String color = request.getParameter("color");
+		System.out.println("color="+color);
 		//获取request请求的值
 		try {
 			Writer  writer = response.getWriter();
-			writer.write("Writer print！");
+			writer.write("Writer print！"+color);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 	
-	public void doPost(HttpServletRequest req, HttpServletResponse resp) {
-		System.out.println("doGet--------");
+	public void doPost(HttpServletRequest request, HttpServletResponse response) {
+		System.out.println("doPost--------");
+		String color = request.getParameter("color");
+		System.out.println("color="+color);
+		//获取request请求的值
+		try {
+			Writer  writer = response.getWriter();
+			writer.write("Writer print！"+color);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
