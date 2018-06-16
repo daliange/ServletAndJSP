@@ -5,6 +5,8 @@ import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -36,16 +38,31 @@ public class HelloServlet extends HttpServlet{
 		list.add("high");
 		
 		response.setContentType("text/html");
+//		try {
+//			Writer  writer = response.getWriter();
+//			writer.write("Writer print！"+color);
+//			Iterator it = list.iterator();
+//			while(it.hasNext()){
+//				writer.write("<br>"+(String)it.next());
+//			}
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+		
+		//请求转发
+		request.setAttribute("list", list);
+		RequestDispatcher view = request.getRequestDispatcher("return.jsp");
 		try {
-			Writer  writer = response.getWriter();
-			writer.write("Writer print！"+color);
-			Iterator it = list.iterator();
-			while(it.hasNext()){
-				writer.write("<br>"+(String)it.next());
-			}
+			view.forward(request, response);
+		} catch (ServletException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		} catch (IOException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		
 	}
 
 }
