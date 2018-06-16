@@ -26,7 +26,8 @@ public class HelloServlet extends HttpServlet{
 		System.out.println("doPost--------");
 		String color = request.getParameter("color");
 		System.out.println("color="+color);
-		//获取request请求的值
+		
+		response.setContentType("text/html");
 		try {
 			Writer  writer = response.getWriter();
 			writer.write("Writer print！"+color);
