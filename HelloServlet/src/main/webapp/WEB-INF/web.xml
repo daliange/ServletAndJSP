@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 	<display-name>Archetype Created Web Application</display-name>
-	
+
 	<!-- 应用级参数配置 -->
 	<context-param>
 		<param-name>encode</param-name>
@@ -19,10 +19,15 @@
 		<servlet-name>helloservlet</servlet-name>
 		<url-pattern>/hello</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>downloadservlet</servlet-name>
 		<servlet-class>com.lijie.DownloadServlet</servlet-class>
+		<init-param>
+			<param-name>name</param-name>
+			<param-value>da_lian_ge</param-value>
+		</init-param>
+
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>downloadservlet</servlet-name>
