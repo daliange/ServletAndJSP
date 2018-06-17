@@ -49,15 +49,19 @@ public class DownloadServlet extends HttpServlet {
 		String listen = (String)getServletContext().getAttribute("listen");
 		System.out.println("容器启动时Listener加载的,获取ServletContext上的参数,listen="+listen);
 		
+		//针对URL重写（针对客户端禁用Cookie的情况）,容器如何知道需要encode？？？
+		String encodeURL = response.encodeURL("return.jsp");
+		System.out.println("encodeURL="+encodeURL);
 		
+		String encodeRedirectURL = response.encodeRedirectURL("return.jsp");
+		System.out.println("encodeRedirectURL="+encodeRedirectURL);
+		
+		//返回一个文件
 		ServletContext ctx = getServletContext();
 		InputStream is = ctx.getResourceAsStream("/download.txt");
-		
 		OutputStream os = response.getOutputStream();
-		
 		int read = 0;
 		byte[] bytes = new byte[1024];
-		
 		while((read=is.read(bytes))!=-1){
 			os.write(bytes, 0, read);
 		}
