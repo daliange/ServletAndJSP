@@ -28,11 +28,18 @@ public class DownloadServlet extends HttpServlet {
 			throws ServletException, IOException {
 		//response.setContentType("application/jar");
 		response.setContentType("text/html");
+		
+		//获取ServletConfig的参数
 		System.out.println("从web.xml中获取ServletConfig的参数,name="+name);
 		
 		//获取ServletContext上下文中的参数
 		String encode = getServletContext().getInitParameter("encode");
 		System.out.println("从web.xml中获取ServletContext上下文中的参数,encode="+encode);
+		
+		//获取ServletContext上下文中的参数，容器启动时Listener加载的
+		String listen = (String)getServletContext().getAttribute("listen");
+		System.out.println("容器启动时Listener加载的,获取ServletContext上的参数,listen="+listen);
+		
 		
 		ServletContext ctx = getServletContext();
 		InputStream is = ctx.getResourceAsStream("/download.txt");
