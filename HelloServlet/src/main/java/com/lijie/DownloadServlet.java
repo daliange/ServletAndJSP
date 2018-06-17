@@ -19,6 +19,7 @@ public class DownloadServlet extends HttpServlet {
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		this.name = config.getInitParameter("name");
+		System.out.println("web容器启动时未调用init方法，该方法第一次被调用时，name="+name);
 		super.init(config);
 	}
 	
@@ -27,7 +28,11 @@ public class DownloadServlet extends HttpServlet {
 			throws ServletException, IOException {
 		//response.setContentType("application/jar");
 		response.setContentType("text/html");
-		System.out.println("从web.xml中获取的name="+name);
+		System.out.println("从web.xml中获取ServletConfig的参数,name="+name);
+		
+		//获取ServletContext上下文中的参数
+		String encode = getServletContext().getInitParameter("encode");
+		System.out.println("从web.xml中获取ServletContext上下文中的参数,encode="+encode);
 		
 		ServletContext ctx = getServletContext();
 		InputStream is = ctx.getResourceAsStream("/download.txt");
