@@ -1,4 +1,4 @@
-package com.lijie;
+package com.lijie.servlet;
 
 import java.io.IOException;
 import java.io.InputStream;

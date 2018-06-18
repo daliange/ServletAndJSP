@@ -1,4 +1,4 @@
-package com.lijie;
+package com.lijie.servlet;
 
 import java.io.IOException;
 import java.io.Writer;
@@ -85,13 +85,13 @@ public class HelloServlet extends HttpServlet{
 		response.setContentType("text/html");
 		
 		//返回Cookie，设置Cookie有效期
-		Cookie cookiename = new Cookie("cookiename","lijie");
-		cookiename.setMaxAge(3600);
-		response.addCookie(cookiename);
-		
-		Cookie cookiepassword = new Cookie("cookiepassword","870807");
-		cookiepassword.setMaxAge(3600);
-		response.addCookie(cookiepassword);
+//		Cookie cookiename = new Cookie("cookiename","lijie");
+//		cookiename.setMaxAge(3600);
+//		response.addCookie(cookiename);
+//		
+//		Cookie cookiepassword = new Cookie("cookiepassword","870807");
+//		cookiepassword.setMaxAge(3600);
+//		response.addCookie(cookiepassword);
 		
 		//Writer输出字符
 //		try {

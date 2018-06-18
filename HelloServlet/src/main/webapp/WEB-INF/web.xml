@@ -32,7 +32,7 @@
 
 	<servlet>
 		<servlet-name>helloservlet</servlet-name>
-		<servlet-class>com.lijie.HelloServlet</servlet-class>
+		<servlet-class>com.lijie.servlet.HelloServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>helloservlet</servlet-name>
@@ -41,7 +41,7 @@
 
 	<servlet>
 		<servlet-name>downloadservlet</servlet-name>
-		<servlet-class>com.lijie.DownloadServlet</servlet-class>
+		<servlet-class>com.lijie.servlet.DownloadServlet</servlet-class>
 		<init-param>
 			<param-name>name</param-name>
 			<param-value>da_lian_ge</param-value>
