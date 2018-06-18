@@ -1,5 +1,5 @@
 <!-- jsp指令 -->
-<%@ page contentType="text/html; charset=GBK" language="java"%>
+<%@ page contentType="text/html; charset=UTF-8" language="java"%>
 <%@ page import="com.lijie.common.*"%>
 <html>
 <body>

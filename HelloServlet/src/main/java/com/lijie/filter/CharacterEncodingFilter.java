@@ -52,7 +52,7 @@ public class CharacterEncodingFilter implements Filter {
 	public void init(FilterConfig config) throws ServletException {
 		// 获取在web.xml文件中配置了的编码格式的信息
 		this.encode = config.getInitParameter("encode");
-		System.out.println("CharacterEncodingFilter初始化");
+		System.out.println("CharacterEncodingFilter初始化,encode="+encode);
 	}
 
 }
