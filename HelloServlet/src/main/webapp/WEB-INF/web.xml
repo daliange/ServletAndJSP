@@ -30,6 +30,7 @@
 		<url-pattern>*</url-pattern>
 	</filter-mapping>
 
+	<!-- 配置servlet -->
 	<servlet>
 		<servlet-name>helloservlet</servlet-name>
 		<servlet-class>com.lijie.servlet.HelloServlet</servlet-class>
@@ -39,6 +40,7 @@
 		<url-pattern>/hello</url-pattern>
 	</servlet-mapping>
 
+	<!-- 配置servlet -->
 	<servlet>
 		<servlet-name>downloadservlet</servlet-name>
 		<servlet-class>com.lijie.servlet.DownloadServlet</servlet-class>
@@ -46,14 +48,27 @@
 			<param-name>name</param-name>
 			<param-value>da_lian_ge</param-value>
 		</init-param>
-
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>downloadservlet</servlet-name>
 		<url-pattern>/download</url-pattern>
 	</servlet-mapping>
+	
+	<!-- 配置jsp的servlet -->
+	<servlet>
+		<servlet-name>jspservlet</servlet-name>
+		<jsp-file>/index.jsp</jsp-file>
+		<init-param>
+			<param-name>name</param-name>
+			<param-value>da_lian_ge</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>jspservlet</servlet-name>
+		<url-pattern>/index.jsp</url-pattern>
+	</servlet-mapping>
 
-
+	<!-- 配置欢迎页面 -->
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
