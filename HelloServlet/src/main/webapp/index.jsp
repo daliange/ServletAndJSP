@@ -7,5 +7,7 @@
 		out.println("111");
 		out.println(Counter.getCount());
 	%>
+	<%= Counter.getCount() %>
+	
 </body>
 </html>
