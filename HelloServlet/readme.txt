@@ -9,3 +9,4 @@
    tomcat判断客户端浏览器是否支持Cookie的依据是请求中是否含有Cookie。
    会自动判断客户端是否支持Cookie。如果客户端支持Cookie，会将URL原封不动地输出来。
    如果客户端不支持Cookie，则会将用户Session的id重写到URL中
+6、response里的编码是对http响应的编码，jsp页面的编码是告诉浏览器按照该编码方式解析，所以二者需要保持一致！
