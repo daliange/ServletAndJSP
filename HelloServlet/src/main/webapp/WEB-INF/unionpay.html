@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html;charset=utf-8' />
+</head>
+<body>
+	<form id='pay_form' name='pay_form' action='https://gateway.95516.com/gateway/api/frontTransReq.do'
+		method='post' accept-charset='UTF-8'>
+			<input type='hidden' name='bizType' id='bizType' value='000201' />
+			<input type='hidden' name='backUrl' id='backUrl' value='http://payment.sandpay.com.cn/request/upacInternetBankNotify' />
+			<input type='hidden' name='orderId' id='orderId' value='UPAC201806190930814000000000000000033826' />
+			<input type='hidden' name='signature' id='signature'
+				value='WJutRQdsq+pfdn5yNWCd4T1ELiZRZV8tPlvSNVwDe+ShCpmBgO1R+4szCSABm8xWfzoueMWGJKVOD/DRop7K7v2trr4yjjJIy0LU3y1UQcfEQzIpi+EJPUPmdsdcXVJcDE5FI9VQyLwQ1ThgNP4fnOr9QLaKigABh+rZLKWLASeOclwKMxGlJ5tbaPRVwi336ZM/cGH3w+6n3HWeP5AAaVw+QZGl2oml2UUFG23x+udvFTPv0q89Y9hCPwNalQPw+v8PSjzGH7eg1VUQTvM3ecn8lU3XPo3XS877z1W1y46/gzptlHnRDJ8lZecOx/sCbaIdTSWIXERwiAbNKlMniw==' />
+			<input type='hidden' name='txnSubType' id='txnSubType' value='01' />
+			<input type='hidden' name='merName' id='merName' value='测试-杉德分公司' />
+			<input type='hidden' name='txnType' id='txnType' value='01' />
+			<input type='hidden' name='channelType' id='channelType' value='07' />
+			<input type='hidden' name='frontUrl' id='frontUrl' value='https://cashier.sandpay.com.cn/gateway/api/order/notice/allChannelPay' />
+			<input type='hidden' name='certId' id='certId' value='69525006230' />
+			<input type='hidden' name='encoding' id='encoding' value='UTF-8' />
+			<input type='hidden' name='acqInsCode' id='acqInsCode' value='48273320' />
+			<input type='hidden' name='version' id='version' value='5.0.0' />
+			<input type='hidden' name='merAbbr' id='merAbbr' value='测试' />
+			<input type='hidden' name='accessType' id='accessType' value='1' />
+			<input type='hidden' name='reqReserved' id='reqReserved' value='00000930' />
+			<input type='hidden' name='txnTime' id='txnTime' value='20180619104142' />
+			<input type='hidden' name='merId' id='merId' value='100211701160001' />
+			<input type='hidden' name='merCatCode' id='merCatCode' value='5441' />
+			<input type='hidden' name='currencyCode' id='currencyCode' value='156' />
+			<input type='hidden' name='signMethod' id='signMethod' value='01' />
+			<input type='hidden' name='txnAmt' id='txnAmt' value='100' />
+	</form>
+</body>
+<script type='text/javascript'>
+	document.pay_form.submit()
+</script>
+</html>
