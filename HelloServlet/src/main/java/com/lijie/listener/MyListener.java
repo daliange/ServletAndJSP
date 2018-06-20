@@ -10,6 +10,8 @@ public class MyListener implements ServletContextListener{
 		//MyListener初始化
 		System.out.println("MyListener初始化");
 		ServletContext sc = sce.getServletContext();
+		String encode = sc.getInitParameter("encode");
+		System.out.println("MyListener启动时获取web.xml的encode="+encode);
 		sc.setAttribute("listen", "listen-value");
 	}
 	
