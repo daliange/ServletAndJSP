@@ -12,3 +12,5 @@
 6、response里的编码是对http响应的编码，jsp页面的编码是告诉浏览器按照该编码方式解析，所以二者需要保持一致！
 7、request如何获取ServletConfig？
    ServletConfig config = this.getServletConfig();  //拿到init方法中的ServletConfig对象
+8、web.xml中配置项的加载顺序是context-param=>listener=>filter=>servlet,
+   配置项的顺序并不会改变加载顺序，但是同类型的配置项会应该加载顺序，servlet中也可以通过load-on-startup来指定加载顺序
